@@ -1,0 +1,4 @@
+rootProject.name = 'springbootdemos'
+
+include "bootemail"
+include "thymeleaf3boot"

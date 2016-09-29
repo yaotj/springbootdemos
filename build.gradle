@@ -1,0 +1,60 @@
+buildscript {
+  repositories {
+    maven {url "http://localhost:8081/artifactory/libs-all/"}
+  }
+  dependencies {
+    classpath("org.springframework.boot:spring-boot-gradle-plugin:${bootVersion}")
+  }
+}
+
+configure(allprojects){ project ->
+  group = "com.yaotuanjie"
+  version = "0.1.snap"
+
+  apply plugin: "java"
+  apply plugin: 'spring-boot'
+  
+  compileJava {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    options.encoding = 'UTF-8'
+  }
+
+  repositories {
+    maven {url "http://localhost:8081/artifactory/libs-all/"}
+  }
+  
+  dependencies {
+    
+  }
+  
+  task initJavaProject {
+    File f = new File("src/main/java")
+    f.mkdirs()
+    f = new File("src/main/resources")
+    f.mkdirs()
+    f = new File("src/test/java")
+    f.mkdirs()
+    f = new File("src/test/resources")
+    f.mkdirs()
+    doLast {
+      println "initJavaProject Success"
+    }
+  }
+  task initJavaWebProject {
+    File f = new File("src/main/java")
+    f.mkdirs()
+    f = new File("src/main/resources")
+    f.mkdirs()
+    f = new File("src/test/java")
+    f.mkdirs()
+    f = new File("src/test/resources")
+    f.mkdirs()
+    f = new File("src/main/webapp/WEB-INF")
+    f.mkdirs()
+    doLast {
+      println "initJavaWebProject Success"
+    }
+  } 
+}
+

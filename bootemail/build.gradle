@@ -1,0 +1,7 @@
+dependencies {
+  compile ("org.springframework.boot:spring-boot-starter-web:${bootVersion}")
+  compile ("org.springframework.boot:spring-boot-starter-thymeleaf:${bootVersion}")
+  compile ("org.springframework.boot:spring-boot-actuator:${bootVersion}")
+  compile ("org.springframework.boot:spring-boot-starter-mail:${bootVersion}")
+  compile ("org.thymeleaf:thymeleaf-spring4:${thymeleaf}")
+}
